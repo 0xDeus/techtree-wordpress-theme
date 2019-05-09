@@ -1,6 +1,5 @@
 === techtree ===
 
-Contributors: automattic
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 Requires at least: 4.5
@@ -9,11 +8,10 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called techtree.
+Techtree is a free responsive theme with one-column or two-column layout, and full page header. 
+The theme is optimized for SEO, and suitable e.g. for a small business site, portfolio gallery site or blog. 
 
-== Description ==
 
-Custom theme for techtree.xyz
 
 == Installation ==
 
