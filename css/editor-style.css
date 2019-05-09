@@ -1,0 +1,773 @@
+/*
+Theme Name: Techtree
+Description: Used to style the Gutenberg editor.
+*/
+
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Body
+ * 2.0 - Typography
+ * 3.0 - Elements
+ * 4.0 - Alignment
+ * 5.0 - Caption
+ * 6.0 - Galleries
+ * 7.0 - Audio / Video
+ * 8.0 - RTL
+ * 9.0 - Media Queries
+ */
+
+
+/**
+ * 1.0 Body
+ */
+
+body {
+	color: #404040;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.5;
+	vertical-align: baseline;
+}
+
+
+/**
+ * 2.0 Typography
+ */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.3.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.28em;
+}
+
+h3 {
+  font-size: 1.21em;
+}
+
+h4 {
+  font-size: 1.14em;
+}
+
+h5 {
+  font-size: 1.07em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #222222;
+	clear: both;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+	margin-top: 0;
+}
+
+p {
+	margin-bottom: 1.5em;
+	text-align: justify;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 2em 1.5em 2em;
+	padding: 1em 3em;
+	background-color: transparent;
+	position: relative;
+}
+blockquote p {margin: 0;}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 1em;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 1em;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+small {
+	font-size: 75%;
+}
+
+big {
+	font-size: 125%;
+}
+
+
+/**
+ * 3.0 Elements
+ */
+blockquote:before {
+  content: "\f10d"; /*Unicode for Left Double Quote*/
+  
+  /*Font*/
+  font-family: 'FontAwesome';
+  font-style: italic;
+  font-size: 2em;
+  color: #ddd;
+  
+  /*Positioning*/
+  position: absolute;
+  left: 0px;
+  top: 0;
+}
+blockquote:after {
+  content: ""; 
+}
+
+q:before {
+	content: open-quote;
+}
+
+q:after {
+	content: close-quote;
+}
+
+blockquote {
+	quotes: "" "";
+}
+
+q {
+	quotes: """ """;
+	font-style: italic;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 3em;
+	padding: 0;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+table {
+	margin: 0 0 1.5em;
+}
+table {
+	border-width: 0px;
+	border-spacing: 0px;
+	border-style: solid;
+	border-color: #999;
+	border-collapse: collapse;
+	background-color: transparent;
+}
+table th,
+ th {
+	border-width: 1px;
+	padding: 3px 10px 3px 10px;
+	border-style: solid;
+	border-color: #999;
+	background-color: transparent;
+	text-align:left;
+	color:#000;
+	font-weight: bold;
+}
+table td,
+ td {
+	border-width: 1px;
+	padding: 3px 10px 3px 10px;
+	border-style: solid;
+	border-color: #999;
+	background-color: transparent;
+	text-align:left;
+	color:#000;
+}
+dl,
+hr,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset,
+figure {
+  margin-bottom: 20px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.6em;
+}
+h1.entry-title {
+	margin-bottom: 0.3em;
+	margin-top: 0;
+}
+p {
+  margin-bottom: 1em;
+}
+main#main {
+	margin-bottom: 30px;
+}
+a {
+	color: #3030cc;
+	text-decoration: none;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: #222222 !important;
+}
+
+/**
+ * 4.0 Alignment
+ */
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 15px;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 15px;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/**
+ * 5.0 Caption
+ */
+
+.wp-caption {
+	margin-bottom: 1em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto;
+}
+
+.wp-caption-text {
+	text-align: center;
+	font-size: 12px;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 7px 0;
+}
+.wp-caption.alignleft {
+	margin: 7px 15px 21px 0;
+}
+
+.wp-caption.alignright {
+	margin: 7px 0 21px 15px;
+}
+
+.wp-caption.aligncenter {
+	margin: 7px auto;
+}
+
+/**
+ * 6.0 Galleries
+ */
+
+.gallery {
+    clear: both;
+    display: block;
+    margin: 1.5em auto;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 0;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+	font-size: 0.75em;
+	margin-top: 0.1em;
+}
+
+
+/**
+ * 7.0 Audio / Video
+ */
+
+.mce-content-body .wpview-wrap {
+	margin-bottom: 32px;
+}
+
+.mce-content-body .wp-audio-playlist {
+	margin: 0;
+}
+
+
+/**
+ * 8.0 RTL
+ */
+
+body.rtl {
+	font-family: Arial, Tahoma, sans-serif;
+}
+
+.rtl blockquote {
+	border-left: none;
+	border-right: 4px solid #707070;
+	margin: 0 -21px 35px 0;
+	padding-left: 0;
+	padding-right: 17px;
+}
+
+.rtl blockquote > blockquote {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.rtl li > ul,
+.rtl li > ol {
+	margin: 0 23px 0 0;
+}
+
+.rtl table th,
+.rtl table caption {
+	text-align: right;
+}
+
+
+/**
+ * 9.0 Media Queries
+ */
+
+@media screen and (max-width: 740px) {
+	body, img, .wp-caption {
+		max-width: 100%;
+	}
+
+	img, .wp-caption {
+		width: auto !important;
+	}
+}
+/*--------------------------------------------------------------
+  My Image with title
+---------------------------------------------------------------*/
+.image-dark figure img {
+	display: block !important;
+	margin: 0 !important;
+}
+.image-dark figure {
+	padding: 0px;
+	margin: 0 0 10px 0;
+	border: 0px solid #bbb;
+}
+.image-dark figure figcaption {
+	background: #222222;
+	color: #ffffff;
+	padding: 8px;
+	margin: 0 !important;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+.image-dark figure figcaption a, .image-dark figure figcaption a:hover, .image-dark figure figcaption a:active, .image-dark figure figcaption a:focus, .image-dark figure figcaption a:visited {
+	color: #ffffff !important;
+	text-decoration: none !important;
+}
+.image-light figure img {
+	display: block !important;
+	margin: 0 !important;
+}
+.image-light figure {
+	padding: 0px;
+	margin: 0 0 10px 0;
+	border: 0px solid #bbb;
+}
+.image-light figure figcaption {
+	background: #f9f9f9;
+	color: #000000;
+	padding: 8px;
+	margin: 0 !important;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+.image-light figure figcaption a, .image-light figure figcaption a:hover, .image-light figure figcaption a:active, .image-light figure figcaption a:focus, .image-light figure figcaption a:visited {
+	color: #000000 !important;
+	text-decoration: none !important;
+}
+/*--------------------------------------------------------------
+ Button formats in the TinyMCE
+--------------------------------------------------------------*/
+.button.button-light,
+.button.button-light:visited {
+  display: inline-block;
+  height: 38px;
+  padding: 0 20px;
+  color: #000 !important;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #eee!important;
+  border-radius: 5px;
+  border: 0px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+ }
+  
+.button.button-light:hover,
+.button.button-light:focus,
+.button.button-light:active {
+  color: #000 !important;
+  background-color: #ddd !important;
+  text-decoration: none;
+  outline: 0; }
+
+.button.large-button-light,
+.button.large-button-light:visited {
+  display: inline-block;
+  height: 50px !important;
+  padding: 0 25px !important;
+  color: #000 !important;
+  text-align: center;
+  font-size: 15px !important;
+  font-weight: 600;
+  line-height: 50px !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #eee !important;
+  border-radius: 5px;
+  border: 0px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+ }
+  
+.button.large-button-light:hover,
+.button.large-button-light:focus,
+.button.large-button-light:active {
+  color: #000 !important;
+  background-color: #ddd !important;
+  text-decoration: none;
+  height: 50px !important;
+  padding: 0 25px !important;
+  font-size: 15px !important;
+  line-height: 50px !important;
+  outline: 0; }
+  
+.large-button-dark,
+.large-button-dark:visited {
+  height: 50px;
+  padding: 0 25px;
+  font-size: 15px;
+  line-height: 50px;
+ }
+  
+.large-button-dark:hover,
+.large-button-dark:focus,
+.large-button-dark:active {
+  height: 50px;
+  padding: 0 25px;
+  font-size: 15px;
+  line-height: 50px;
+ }
+ 
+ /* 5.0 */
+
+#page {overflow-x: hidden;}
+.alignwide, .alignfull {width: 100%;}
+/* List widths */
+.wp-block-latest-posts.alignwide, 
+.wp-block-latest-comments.alignwide,
+.wp-block-categories-list.alignwide,
+.wp-block-latest-posts.alignfull, 
+.wp-block-latest-comments.alignfull,
+.wp-block-categories-list.alignfull
+{width: auto;}
+/* Table  */
+.wp-block-table.alignwide, .wp-block-table.alignfull {
+display: table; 
+width: 100%  !important;}
+/* Gallery widget */
+.gallery {
+  margin: 4px -8px;
+}
+.gallery-item {
+  padding: 8px;
+	margin-top: 0px;
+}
+/* Quote */
+blockquote p {
+margin-bottom: 10px; 
+font-family: "Times New Roman", Times, serif; 
+font-size: 20px; 
+font-style: italic;}
+.wp-block-pullquote {
+	border-top: 0;
+	border-bottom: 0;
+}
+.wp-block-pullquote p {
+font-family: "Times New Roman", Times, serif;
+	text-align: center;
+}
+.wp-block-quote {
+	border-left: 0 !important;
+}
+blockquote.wp-block-quote.is-large {
+	margin: 0 2em 1.5em 2em;
+	padding: 1em 3em;
+	border-left: 0;
+}
+blockquote.wp-block-quote.is-large p {
+	font-family: "Times New Roman", Times, serif;
+}
+/* Gallery block */
+ul.wp-block-gallery {margin-left: 0;}
+/* Full width */
+@media (max-width: 767px) {
+#primary .wp-block-image.alignfull,
+#primary .wp-block-embed.alignfull,
+#primary .wp-block-cover.alignfull,
+#primary .wp-block-gallery.alignfull {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: auto;
+	max-width: 100vw;
+	}
+}
+@media (max-width: 1024px) {
+#primary.tablet-grid-100 .wp-block-image.alignfull,
+#primary.tablet-grid-100 .wp-block-embed.alignfull,
+#primary.tablet-grid-100 .wp-block-cover.alignfull,
+#primary.tablet-grid-100 .wp-block-gallery.alignfull {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: auto;
+	max-width: 100vw;
+	}
+}
+@media (min-width: 1025px) {
+#primary.grid-100 .alignfull {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: auto;
+	  max-width: 100vw;
+	}
+#primary.grid-100 .wp-block-columns.alignfull,
+#primary.grid-100 .wp-block-audio.alignfull,
+#primary.grid-100 .wp-block-table.alignfull,
+#primary.grid-100 .wp-block-latest-posts.alignfull,
+#primary.grid-100 .wp-block-categories.alignfull,
+#primary.grid-100 .wp-block-pullquote.alignfull,
+#primary.grid-100 .wp-block-latest-comments.alignfull {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+#primary.grid-100 .wp-block-table.alignfull {
+display: table; 
+width: 96vw !important; 
+margin-left: calc(50% - 48vw) !important; 
+margin-right: calc(50% - 48vw) !important;}
+}
+.alignfull, .alignwide {
+    clear: both;
+}
+/* Separator  */
+.wp-block-separator {width: 20%; margin-left: 40%; margin-right: 40%; margin-top: 20px;}
+.wp-block-separator.is-style-wide,
+ .wp-block-separator.is-style-dots {
+ width: 100%; 
+ margin-left: 0; 
+ margin-right: 0;  }
+ 
+/* Button */
+.wp-block-button__link {border-radius: 4px; font-size: 15px;  text-transform: uppercase; letter-spacing: 1px;}
+.wp-block-button__link:visited,
+.wp-block-button__link:link,
+.wp-block-button__link:hover,
+.wp-block-button__link:active,
+.wp-block-button__link:focus
+{color: #fff; text-decoration: none;}
+
+/* Columns */
+.wp-block-columns {
+  display: flex;
+}
+.wp-block-column {
+  flex: 1;
+}
+.wp-block-columns {
+  margin: 20px 0;
+}
+.wp-block-column {
+  margin: 0 20px !important;
+}
+.wp-block-column:first-child {
+	margin-left: 0 !important;
+}
+.wp-block-column:last-child {
+	margin-right: 0 !important;
+}
+@media (max-width: 767px) {
+  .wp-block-columns {
+    display: block;
+  }
+	.wp-block-column {
+    margin: 20px 0 !important;
+  }
+}
+/* Main column width */
+.wp-block {
+    max-width: 720px;
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+    max-width: 1080px;
+}
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+    max-width: none;
+}
+/* list */
+.editor-styles-wrapper ul ul, .editor-styles-wrapper ol ul {list-style-type: disc !important;}
+
+/* Latest posts grid */
+.wp-block-latest-posts.is-grid {margin-left: 0;}
+/* Latest comments */
+.wp-block-latest-comments {margin-left: 0;}
